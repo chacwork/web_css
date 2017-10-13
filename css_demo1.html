@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>my demo1</title>
+    <style media="screen">
+      ul {
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        transform:translate(-50%,-50%) ;
+        transform-style: preserve-3d;
+        -webkit-perspective: 0;
+        transform: rotateX(-29.5deg)  rotateY(-40deg);
+        -webkit-animation: rot 5s infinite;
+      }
+      li {
+        list-style:none; /*#去掉列表前面的‘·’*/
+        width: 200px;
+        height: 200px;
+        position: absolute;/*在父元素<ul>内定位*/
+        background-color: gray;
+        opacity:0.2;/*透明度*/
+        border:2px solid;
+        border-radius:10px;
+      }
+      #planum1 {
+        transform: rotateX(90deg) translateZ(-100px);
+        -webkit-transform: rotateX(90deg) translateZ(-100px);
+      }
+      #planum2 {
+        transform: rotateX(90deg) translateZ(100px);
+        -webkit-transform: rotateX(90deg) translateZ(100px);
+      }
+      #planum3 {
+        transform: rotateY(90deg) translateZ(-100px);
+        -webkit-transform: rotateY(90deg) translateZ(-100px);
+      }
+      #planum4 {
+        transform: rotateY(90deg) translateZ(100px);
+        -webkit-transform: rotateY(90deg) translateZ(100px);
+      }
+      #planum5 {
+        transform: translateZ(100px);
+        -webkit-transform: translateZ(100px);
+      }
+      #planum6 {
+        transform: translateZ(-100px);
+        -webkit-transform: translateZ(-100px);
+      }
+      @-webkit-keyframes 'rot' {
+        0% {
+          -webkit-transform: rotateY(45deg) rotateX(75deg) rotateZ(180deg);
+          -moz-transform: rotateY(45deg) rotateX(75deg) rotateZ(180deg);
+      }
+
+      50% {
+          -webkit-transform: rotateZ(-320deg) rotateX(320deg) rotateZ(-320deg);
+          -moz-transform: rotateZ(-320deg) rotateX(320deg) rotateZ(-320deg);
+      }
+      100% {
+        -webkit-transform: rotateY(45deg) rotateX(75deg) rotateZ(180deg);
+        -moz-transform: rotateY(45deg) rotateX(75deg) rotateZ(180deg);
+      }
+
+
+
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li id='planum1'></li>
+        <li id="planum2"></li>
+        <li id="planum3"></li>
+        <li id="planum4"></li>
+        <li id="planum5"></li>
+        <li id="planum6"></li>
+      </ul>
+    </div>
+  </body>
+</html>
